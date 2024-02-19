@@ -33,21 +33,6 @@ local MainSection = MainTab:CreateSection("Main")
 local Button = MainSection:CreateButton({
    Name = "Button Example",
    Callback = function()
-      -- A função que acontece quando o botão é pressionado
+      print("O botão foi pressionado!") -- A função que acontece quando o botão é pressionado
    end,
-})
-
-Rayfield:Notify({
-   Title = "Script Executado",
-   Content = "O script foi executado com sucesso!",
-   Duration = 5,
-   Image = nil,
-   Actions = { -- Botões de Notificação
-      Ignore = {
-         Name = "OK!",
-         Callback = function()
-            print("O usuário clicou em OK!")
-         end
-      }
-   },
 })
