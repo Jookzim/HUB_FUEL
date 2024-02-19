@@ -45,7 +45,7 @@ Rayfield:Notify({
    },
 })
 
-local Button = MainTab:CreateButton({
+local Button = MainSection:CreateButton({
    Name = "infinite yield",
    Callback = function()
 
