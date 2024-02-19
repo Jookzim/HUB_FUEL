@@ -1,41 +1,55 @@
-pcall(function()
-	-- Script to PlaceId table
-	local PlaceIdToScriptTable = {
-		[10371908957] = "https://raw.githubusercontent.com/Blastbrean/PascalCase-ddev/main/Compiler/Output.lua",
-	}
+Custom_Finity_Theme = {}
 
-	-- Deepwoken PlaceIds...
-	local DeepwokenPlaceIds = {
-		12559711136,
-		12522892314,
-		12522889886,
-		12522881268,
-		11108929042,
-		9854906953,
-		9598091549,
-		9528956055,
-		8712356310,
-		8668476218,
-		6832944305,
-		6832934465,
-		6473861193,
-		6032399813,
-		5735553160,
-		4111023553,
-	}
+-- Please note that when you add your own themes, You will need to have the name given be EXACTLY as the theme name.
 
-	-- Add these to the script table, with our Deepwoken Script as the URL...
-	for Index, PlaceId in next, DeepwokenPlaceIds do
-		PlaceIdToScriptTable[PlaceId] =
-			"https://raw.githubusercontent.com/Blastbrean/PascalCase-dw/main/Compiler/Output.lua"
-	end
+Custom_Finity_Theme.CustomThemes = {
 
-	-- Attempt to get a URL to load from with our PlaceId...
-	local ScriptString = PlaceIdToScriptTable[game.PlaceId]
-	if not ScriptString then
-		return warn("PascalCase does not have a script for your current game!")
-	end
+	["Example"] = { -- this is dark mode, customize it all you want.
 
-	-- Load script...
-	loadstring(game:HttpGet(ScriptString))()
-end)
+		main_container = Color3.fromRGB(32, 32, 33),
+		separator_color = Color3.fromRGB(63, 63, 65),
+
+		text_color = Color3.fromRGB(206, 206, 206),
+
+		category_button_background = Color3.fromRGB(63, 62, 65),
+		category_button_border = Color3.fromRGB(72, 71, 74),
+
+		checkbox_checked = Color3.fromRGB(132, 255, 130),
+		checkbox_checked_inner = Color3.fromRGB(141, 245, 139),
+		checkbox_outer = Color3.fromRGB(84, 81, 86),
+		checkbox_inner = Color3.fromRGB(132, 132, 136),
+
+		slider_color = Color3.fromRGB(177, 177, 177),
+		slider_color_sliding = Color3.fromRGB(132, 255, 130),
+		slider_background = Color3.fromRGB(88, 84, 90),
+		slider_text = Color3.fromRGB(177, 177, 177),
+
+		textbox_background = Color3.fromRGB(103, 103, 106),
+		textbox_background_hover = Color3.fromRGB(137, 137, 141),
+		textbox_text = Color3.fromRGB(195, 195, 195),
+		textbox_text_hover = Color3.fromRGB(232, 232, 232),
+		textbox_placeholder = Color3.fromRGB(135, 135, 138),
+
+		dropdown_background = Color3.fromRGB(88, 88, 91),
+		dropdown_text = Color3.fromRGB(195, 195, 195),
+		dropdown_text_hover = Color3.fromRGB(232, 232, 232),
+		dropdown_scrollbar_color = Color3.fromRGB(118, 118, 121),
+		dropdown_scrollbar_thickness = 4,
+
+		button_background = Color3.fromRGB(103, 103, 106),
+		button_background_hover = Color3.fromRGB(137, 137, 141),
+		button_background_down = Color3.fromRGB(70, 70, 81),
+
+		scrollbar_color = Color3.fromRGB(118, 118, 121),
+
+		notification_warn = Color3.fromRGB(236, 129, 44),
+		notification_success = Color3.fromRGB(139, 217, 45),
+		notification_info = Color3.fromRGB(206, 206, 206),
+
+		NotifSound = "FinityGUI/assets/NotifSound.wav",
+
+	},
+
+}
+
+return Custom_Finity_Theme
