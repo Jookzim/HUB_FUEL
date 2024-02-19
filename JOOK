@@ -28,7 +28,7 @@ local Window = JOOKHub:CreateWindow({
 
 local MainTab = Window:CreateTab("🌹Inicio🌹", nil) -- Title, Image
 
-local MainSection = MainTabTab:CreateSection("Main")
+local MainSection = MainTab:CreateSection("Main")
 
 Rayfield:Notify({
    Title = "Script Executado",
