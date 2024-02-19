@@ -30,6 +30,13 @@ local MainTab = Window:CreateTab("🌹Inicio🌹", nil) -- Title, Image
 
 local MainSection = MainTab:CreateSection("Main")
 
+local Button = MainSection:CreateButton({
+   Name = "Button Example",
+   Callback = function()
+      -- A função que acontece quando o botão é pressionado
+   end,
+})
+
 Rayfield:Notify({
    Title = "Script Executado",
    Content = "O script foi executado com sucesso!",
@@ -43,11 +50,4 @@ Rayfield:Notify({
          end
       }
    },
-})
-
-local Button = MainTab:CreateButton({
-   Name = "Button Example",
-   Callback = function()
-   -- The function that takes place when the button is pressed
-   end,
 })
